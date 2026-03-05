@@ -11,6 +11,11 @@ class _RankingsScreenState extends State<RankingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),);
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: TextButton(onPressed: () {
+          Navigator.of(context).pop();
+        }, child: Text("back",)),
+      ),);
   }
 }

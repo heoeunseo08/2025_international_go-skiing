@@ -5,6 +5,11 @@ import 'package:go_skiing/screen/game_screen.dart';
 import 'package:go_skiing/screen/rankings_screen.dart';
 import 'package:go_skiing/screen/setting_screen.dart';
 
+ValueNotifier<Color> jacketColor = ValueNotifier(Color(0xffF87373));
+ValueNotifier<int> coinCount = ValueNotifier(0);
+ValueNotifier<String> playerName = ValueNotifier("");
+ValueNotifier<Duration> duration = ValueNotifier(Duration.zero);
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -63,6 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   GestureDetector(
                     onTap: () {
                       log("게임 시ㅈ가");
+                      playerName.value = controller.text;
+
                       controller.text.isEmpty
                           ? showDialog(
                               context: context,
@@ -77,7 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       width: 140,
                       color: Color(0xff9DD4FA),
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 16,
+                      ),
                       alignment: Alignment.center,
                       child: Text(
                         "Start Game",
@@ -102,7 +112,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       width: 140,
                       color: Color(0xff9DD4FA),
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 16,
+                      ),
                       alignment: Alignment.center,
                       child: Text(
                         "Rankings",
@@ -127,7 +140,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       width: 140,
                       color: Color(0xff9DD4FA),
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 16,
+                      ),
                       alignment: Alignment.center,
                       child: Text(
                         "Setting",
