@@ -6,7 +6,7 @@ import 'package:go_skiing/screen/rankings_screen.dart';
 import 'package:go_skiing/screen/setting_screen.dart';
 
 ValueNotifier<Color> jacketColor = ValueNotifier(Color(0xffF87373));
-ValueNotifier<int> coinCount = ValueNotifier(0);
+ValueNotifier<int> coinCount = ValueNotifier(10);
 ValueNotifier<String> playerName = ValueNotifier("");
 ValueNotifier<Duration> duration = ValueNotifier(Duration.zero);
 
